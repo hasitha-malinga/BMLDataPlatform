@@ -1,0 +1,9 @@
+{
+	"name": "bmladfdev",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1786919e-81f7-4955-a0fc-27f38d636338",
+		"tenantId": "cf31badf-b9e1-40bd-aac9-1ac8beda0283"
+	}
+}

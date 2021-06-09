@@ -1,0 +1,22 @@
+{
+	"name": "AzureDataLakeStorageLS",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVaultLS",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "datalakegen2"
+			},
+			"accountKey": {
+				"type": "SecureString",
+				"value": "**********"
+			}
+		}
+	}
+}
