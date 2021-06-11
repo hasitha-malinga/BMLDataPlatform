@@ -17,11 +17,15 @@ steps:
   inputs:
     restoreSolution: '$(solution)'
 
-- task: CopyPublishBuildArtifacts@1
+- task: CopyFiles@2
   inputs:
-    CopyRoot: '$(Agent.BuildDirectory)'
-    Contents: '/*'
-    ArtifactName: 'BMLDataPatformArtifact'
-    ArtifactType: 'Container'
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'BMLDataPlatformArtifact'
+    publishLocation: 'Container'
 
